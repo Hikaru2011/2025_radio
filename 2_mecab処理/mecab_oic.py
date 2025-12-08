@@ -14,8 +14,8 @@ print_red("処理を開始")
 start_time = time.perf_counter() #処理時間計測開始
 pbar = tqdm(total=100) #処理進捗状況確認用バー表示
 
-df = pd.read_excel(r"c:\Users\hikar\Desktop\TimelineToExel\timeline_final.xlsx")
-df_output = pd.read_excel(r"c:\Users\hikar\Desktop\内容分析プロジェクト\timeline_mecab.xlsx")
+df = pd.read_excel(r"\1_txt_exel化\timeline_out.xlsx")
+df_output = pd.read_excel(r"\timeline_mecab.xlsx")
 px = 100/df.shape[0] #tqdmの1コマ分を計算
 
 tagger = mecab.Tagger()
@@ -65,5 +65,5 @@ for i in df.iterrows():
     pbar.set_description(f"\r第{index}行目の処理が終了,合計処理時間:{all_time},indexデータ:{year}/{month}/{day}")
     pbar.update(px)
 
-df_output.to_excel(r"c:\Users\hikar\Desktop\内容分析プロジェクト\timeline_mecab.xlsx")
+df_output.to_excel(r"\timeline_mecab.xlsx")
 pbar.close()

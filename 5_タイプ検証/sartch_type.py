@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-df = pd.read_excel(r"c:\Users\hikar\Desktop\TimelineToExel\timeline_out.xlsx")
+df = pd.read_excel(r"\1_txt_exel化\timeline_out.xlsx")
 df["type"] = df["type"].astype("object")
 
 words_radio = [    "R1","R2","FM","エフエム","AM","am","ラジオ","ニッポン放送","文化放送","TBSラジオ",
@@ -90,5 +90,5 @@ for i in df.iterrows():
     print("//END No:", index, "|type=", new_type, "//")
 
 print("書き出し中,,,")
-df.to_excel(r"C:\Users\hikar\Desktop\TimelineToExel\timeline_out.xlsx", index=False)
+df.to_excel(r"\timeline_out.xlsx", index=False)
 print("END")

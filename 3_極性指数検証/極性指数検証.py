@@ -1,7 +1,7 @@
 import pandas as pd
 from tqdm import tqdm
 
-df = pd.read_excel(r"\timeline_mecab.xlsx")
+df = pd.read_excel(r"\2_mecab処理\timeline_mecab.xlsx")
 print("dfの読み込み終了")
 dic = pd.read_csv(r"\pn_ja.csv", sep=":", encoding="utf-8")
 print("dicの読み込み終了")
