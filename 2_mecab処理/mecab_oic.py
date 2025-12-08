@@ -20,7 +20,8 @@ px = 100/df.shape[0] #tqdmの1コマ分を計算
 
 tagger = mecab.Tagger()
 
-natto = r"^\S+\s+\S+\s+\S+\s+([^\-\t]+)\s*\S+.+$"
+#処理結果oicから取り出す正規表現
+natto = r"^\S+\s+\S+\s+\S+\s+([^\-\t]+)\s*\S+.+$" 
 shoyu = r"^(\S+)[^a-zA-Z0-9\s]?\s+.+"
 
 
