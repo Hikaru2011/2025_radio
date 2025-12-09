@@ -90,5 +90,5 @@ for i in df.iterrows():
     print("//END No:", index, "|type=", new_type, "//")
 
 print("書き出し中,,,")
-df.to_excel(r"\timeline_out.xlsx", index=False)
+df.to_excel(r"\timeline_type.xlsx", index=False)
 print("END")
